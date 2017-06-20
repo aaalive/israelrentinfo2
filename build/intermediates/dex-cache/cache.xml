@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/5a1790080dab65f5e9bd42f331517a881255b8df/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_022fb74011ab0af21fca29023ab8ece61093a98f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/f66a30ead7046a92a3b346cc81f3f694929b0ebd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_e696fb1ce8b46117baa08079a42513d06e3f216a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/5f1ae3312b4c986307bc95bb0d5e85c5961282e3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_ef485895597505837d26b00efef75b336efa7ca2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/3bb4407b9a46570b6e9e7550e85f7d5a4fbc11c0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_3f9a0c523f41ae7093dec308f45e9b611460c798.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/acf2b2ad870e0986d970f2841e361579b17e5acf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_6d61ef7d329ab752c84113a750eacd031a4d31a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_c6fff382272e98136f3672c957115c0233424bff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_a9371bdab19b2cffac554e4f3496e655540f84e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b70c5ad05857b8b3b2458777e1b489a96d82f05">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_7e7085d67f890ece5daedef756aec9e2350990a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/092d80d9c81688e35f1a8a5053e877335e7d0fd0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_62432050aa58a8c4a85e2acb20a1eb5050331470.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/73025bad757ba49496e03026d62f4dfe8172e115/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_2cfc06b0f409fca697bcb74e5da1d8173f0db28c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/c45004a51dd472d7ad4bf54d5de6b7fe01fdfcaf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="21160c044ba984fb2e33b833c89a496becb85cfd">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_9f79cb1aeb4555dfe595d8df69d67c006454ec70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/66f48594dec576114ba03394028fb677dd666eb7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_2ff584f3b33a58fa9e34822660e13931e4366059.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/da149d8a58f13a3cb7a20cb02c9e20e00ccc0f49/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_919928f0df3c0cafe15aa97229687e1621974b94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/b8b882908bdab2d12bf72779bf498f1e225e2cc5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_1471a9dd777fb7ef42dc7819ef441ec64ac62153.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6178e31397c24ab1bfc09766832cdcf519621eb7">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_c5362dab74043273e33b2dae6cfa3171f7174ca3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/4b9c2e16a64a8c28c137cfcd4769febccc140c6b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e6a161b3796c15fe00755ce47e03067e568ecc4">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_360cae014e560007debe0e67148f1a5944a50aac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_ee7b9d200bcf4a396d6385306bf168ef361040d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d695dc4247690369d66c022c6d18190155c61fcd">
+        <dex dex="/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/pre-dexed/debug/classes_2439c8f32880ae2e59e2132c26a67a02124fdd61.jar" />
+    </item>
+
+</items>

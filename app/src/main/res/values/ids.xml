@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="realtabcontent">false</item>
+    <item type="id" name="rentals_list">false</item>
+    <item type="id" name="image">false</item>
+    <item type="id" name="title">false</item>
+    <item type="id" name="price">false</item>
+    <item type="id" name="imageBtn">false</item>
+    <item type="id" name="linearLayout1">false</item>
+    <item type="id" name="checkIn">false</item>
+    <item type="id" name="checkOut">false</item>
+    <item type="id" name="adultsTxt">false</item>
+    <item type="id" name="adults">false</item>
+    <item type="id" name="kidsTxt">false</item>
+    <item type="id" name="kids">false</item>
+    <item type="id" name="emailBody">false</item>
+    <item type="id" name="button1">false</item>
+    <item type="id" name="icon_grid">false</item>
+    <item type="id" name="action_settings">false</item>
+</resources>

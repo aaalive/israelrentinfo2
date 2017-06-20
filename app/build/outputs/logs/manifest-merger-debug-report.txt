@@ -1,0 +1,186 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:2:1-70:12
+	package
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:3:5-26
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:4:5-29
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/73025bad757ba49496e03026d62f4dfe8172e115/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/da149d8a58f13a3cb7a20cb02c9e20e00ccc0f49/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] /Users/anastasiya/.android/build-cache/5a1790080dab65f5e9bd42f331517a881255b8df/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] /Users/anastasiya/.android/build-cache/acf2b2ad870e0986d970f2841e361579b17e5acf/output/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/anastasiya/.android/build-cache/c45004a51dd472d7ad4bf54d5de6b7fe01fdfcaf/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /Users/anastasiya/.android/build-cache/5f1ae3312b4c986307bc95bb0d5e85c5961282e3/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/anastasiya/.android/build-cache/66f48594dec576114ba03394028fb677dd666eb7/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/anastasiya/.android/build-cache/092d80d9c81688e35f1a8a5053e877335e7d0fd0/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/anastasiya/.android/build-cache/3bb4407b9a46570b6e9e7550e85f7d5a4fbc11c0/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/anastasiya/.android/build-cache/b8b882908bdab2d12bf72779bf498f1e225e2cc5/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] /Users/anastasiya/.android/build-cache/f66a30ead7046a92a3b346cc81f3f694929b0ebd/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.github.clans:fab:1.6.2] /Users/anastasiya/.android/build-cache/4b9c2e16a64a8c28c137cfcd4769febccc140c6b/output/AndroidManifest.xml:8:5-10:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:12:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:14:5-69
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:14:22-66
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:15:5-103
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:15:77-101
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:16:5-105
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:16:79-103
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:16:22-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:17:5-124
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:17:97-121
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:17:22-95
+uses-feature#0x00020000
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:19:5-21:35
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:20:9-41
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:21:9-32
+permission#com.example.permission.MAPS_RECEIVE
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:23:5-26:36
+	android:protectionLevel
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:25:9-44
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:24:9-59
+uses-feature#android.hardware.telephony
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:29:5-31:36
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:31:9-33
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:30:9-50
+supports-screens
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:33:5-38:40
+	android:largeScreens
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:35:9-36
+	android:smallScreens
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:37:9-36
+	android:normalScreens
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:36:9-37
+	android:xlargeScreens
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:38:9-37
+	android:anyDensity
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:34:9-34
+application
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:40:5-68:19
+MERGED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/73025bad757ba49496e03026d62f4dfe8172e115/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/da149d8a58f13a3cb7a20cb02c9e20e00ccc0f49/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.2.0] /Users/anastasiya/.android/build-cache/acf2b2ad870e0986d970f2841e361579b17e5acf/output/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/anastasiya/.android/build-cache/c45004a51dd472d7ad4bf54d5de6b7fe01fdfcaf/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.2.0] /Users/anastasiya/.android/build-cache/5f1ae3312b4c986307bc95bb0d5e85c5961282e3/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/anastasiya/.android/build-cache/66f48594dec576114ba03394028fb677dd666eb7/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/anastasiya/.android/build-cache/092d80d9c81688e35f1a8a5053e877335e7d0fd0/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/anastasiya/.android/build-cache/3bb4407b9a46570b6e9e7550e85f7d5a4fbc11c0/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/anastasiya/.android/build-cache/b8b882908bdab2d12bf72779bf498f1e225e2cc5/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/anastasiya/.android/build-cache/f66a30ead7046a92a3b346cc81f3f694929b0ebd/output/AndroidManifest.xml:25:5-20
+MERGED from [com.github.clans:fab:1.6.2] /Users/anastasiya/.android/build-cache/4b9c2e16a64a8c28c137cfcd4769febccc140c6b/output/AndroidManifest.xml:12:5-20
+	android:label
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:44:9-41
+	android:allowBackup
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:42:9-35
+	android:icon
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:43:9-45
+	android:theme
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:45:9-44
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:41:9-45
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:48:9-50:71
+	android:value
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:50:13-68
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:49:13-62
+meta-data#com.google.android.gms.version
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:51:9-53:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:53:13-66
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:52:13-58
+uses-library#com.google.android.maps
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:55:9-57:39
+	android:required
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:57:13-36
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:56:13-51
+activity#info.samson.activities.FragmentTabs
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:59:9-67:20
+	android:label
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:61:13-45
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:60:13-63
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:62:13-66:29
+action#android.intent.action.MAIN
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:63:17-69
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:63:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:65:17-77
+	android:name
+		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:65:27-74
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:19-85

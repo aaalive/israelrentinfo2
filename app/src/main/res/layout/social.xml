@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20.0dip"
+    android:gravity="center"
+    android:padding="8.0dip"
+            android:id="@+id/social_cont"
+    
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@id/icon_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:horizontalSpacing="0.0dip"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10.0dip" />
+
+</LinearLayout>

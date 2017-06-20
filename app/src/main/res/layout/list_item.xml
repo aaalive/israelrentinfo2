@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <info.samson.helpers.ResizeableImageView
+        android:id="@id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5.0dip"
+        android:src="@drawable/stub"
+/>
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_corners_bg"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="8.0dip"
+        android:background="@android:color/transparent"
+        android:padding="3.0dip"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#ffffff"
+        />
+
+    <ImageView
+        android:id="@id/imageBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="5.0dip"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"        android:src="@drawable/share"
+        android:layout_gravity="top|right"
+        android:background="@drawable/round_corners_bg"
+/>
+
+    <ImageView
+        android:id="@+id/googleMapsBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="5.0dip"
+        android:paddingLeft="3dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/navigate"
+        android:background="@drawable/round_corners_bg"
+        android:visibility="gone" />
+
+</FrameLayout>
