@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.URI;
 import java.util.List;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -15,8 +16,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 public class Utils {
@@ -87,25 +90,32 @@ public class Utils {
     }
 
     private static  Uri getUriFromPhoneNumber(String phoneNumber, Context context) {
-        Uri uri = null;
-        String contactId = getContactIdByPhoneNumber(phoneNumber, context);
-        if (!TextUtils.isEmpty(contactId)) {
-            Cursor cursor = context.getContentResolver().query(
-                    ContactsContract.Data.CONTENT_URI, new String[]{ContactsContract.Data._ID},
-                    ContactsContract.Data.DATA2 + "=? AND " + ContactsContract.Data.CONTACT_ID + " = ?",
-                    new String[]{"Viber", contactId}, null);
-            if (cursor != null) {
-                while (cursor.moveToNext()){
-                    String id = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.Data._ID));
-                    if (!TextUtils.isEmpty(id)) {
-                        uri = Uri.parse(ContactsContract.Data.CONTENT_URI + "/" + id);
-                        break;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context.checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            ((Activity)context).requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, Constans.PERMISSIONS_REQUEST_READ_CONTACTS);
+            //After this point you wait for callback in onRequestPermissionsResult(int, String[], int[]) overriden method
+        } else {
+            // Android version is lesser than 6.0 or the permission is already granted.
+            Uri uri = null;
+            String contactId = getContactIdByPhoneNumber(phoneNumber, context);
+            if (!TextUtils.isEmpty(contactId)) {
+                Cursor cursor = context.getContentResolver().query(
+                        ContactsContract.Data.CONTENT_URI, new String[]{ContactsContract.Data._ID},
+                        ContactsContract.Data.DATA2 + "=? AND " + ContactsContract.Data.CONTACT_ID + " = ?",
+                        new String[]{"Viber", contactId}, null);
+                if (cursor != null) {
+                    while (cursor.moveToNext()){
+                        String id = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.Data._ID));
+                        if (!TextUtils.isEmpty(id)) {
+                            uri = Uri.parse(ContactsContract.Data.CONTENT_URI + "/" + id);
+                            break;
+                        }
                     }
+                    cursor.close();
                 }
-                cursor.close();
             }
+            return uri;
         }
-        return uri;
     }
 
     private static String getContactIdByPhoneNumber(String phoneNumber, Context context) {

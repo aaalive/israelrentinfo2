@@ -11,14 +11,18 @@ import info.samson.fragments.MailFrag;
 import info.samson.fragments.MapFrag;
 import info.samson.fragments.RentFrag;
 import info.samson.fragments.SocialFrag;
+import info.samson.helpers.Constans;
 import info.samson.helpers.Utils;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -123,6 +127,25 @@ public class FragmentTabs extends AppCompatActivity {
         intent.setData(Uri.parse("http://israelrent.info/index/contacts/0-12"));
         startActivity(intent);
         return true;
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == Constans.PERMISSIONS_REQUEST_READ_CONTACTS) {
+            for (int i = 0; i < permissions.length; i++) {
+                String permission = permissions[i];
+                int grantResult = grantResults[i];
+
+                if (permission.equals(Manifest.permission.SEND_SMS)) {
+                    if (grantResult == PackageManager.PERMISSION_GRANTED) {
+
+                    } else {
+                        ActivityCompat.requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, new String[]{Constans.PERMISSIONS_REQUEST_READ_CONTACTS});
+                    }
+                }
+            }
+        }
     }
 
     private void setupViewPager(ViewPager viewPager) {
