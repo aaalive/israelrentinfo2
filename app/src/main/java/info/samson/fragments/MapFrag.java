@@ -100,68 +100,69 @@ public class MapFrag extends Fragment {
 			@Override
 			public void onMapReady(GoogleMap googleMap) {
 				map =googleMap;
-			}
-		});
-		map.getUiSettings().setMyLocationButtonEnabled(false);
-		map.setMyLocationEnabled(true);
+				map.getUiSettings().setMyLocationButtonEnabled(false);
+				map.setMyLocationEnabled(true);
+				MapsInitializer.initialize(MapFrag.this.getActivity());
 
-		MapsInitializer.initialize(this.getActivity());
+				// Updates the location and zoom of the MapView
+				CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(31.682218, 34.561872), 14);
+				map.animateCamera(cameraUpdate);
 
-		// Updates the location and zoom of the MapView
-		CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(31.682218, 34.561872), 14);
-		map.animateCamera(cameraUpdate);
-
-		for(final RentalLocation rental : locations){
-			Marker marker = map.addMarker(
-					new MarkerOptions()
-					.position(rental.getLatLng())
-					.alpha(0.75f)
-					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
-					//    .flat(true)
-					.title(rental.getTitle())
+				for(final RentalLocation rental : locations){
+					Marker marker = map.addMarker(
+							new MarkerOptions()
+									.position(rental.getLatLng())
+									.alpha(0.75f)
+									.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+									//    .flat(true)
+									.title(rental.getTitle())
 					);
 
-		}
-
-
-		map.setOnMarkerClickListener(new OnMarkerClickListener() {
-
-			@Override
-			public boolean onMarkerClick(final Marker marker) {
-
-				if (!marker.isInfoWindowShown()){
-					marker.showInfoWindow();
 				}
-				else {
-					for(final RentalLocation rental : locations){
-						if(marker.getTitle().equals(rental.getTitle())){
-							Intent intent = new Intent("android.intent.action.VIEW");
-							intent.setData(Uri.parse(rental.getUrl()));
-							startActivity(intent);
+
+
+				map.setOnMarkerClickListener(new OnMarkerClickListener() {
+
+					@Override
+					public boolean onMarkerClick(final Marker marker) {
+
+						if (!marker.isInfoWindowShown()){
+							marker.showInfoWindow();
+						}
+						else {
+							for(final RentalLocation rental : locations){
+								if(marker.getTitle().equals(rental.getTitle())){
+									Intent intent = new Intent("android.intent.action.VIEW");
+									intent.setData(Uri.parse(rental.getUrl()));
+									startActivity(intent);
+								}
+							}
+							marker.hideInfoWindow();
+						}
+
+
+						return true;
+					}
+				});
+
+
+				map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
+
+					@Override
+					public void onInfoWindowClick(Marker marker) {
+						for(final RentalLocation rental : locations){
+							if(marker.getTitle().equals(rental.getTitle())){
+								Intent intent = new Intent("android.intent.action.VIEW");
+								intent.setData(Uri.parse(rental.getUrl()));
+								startActivity(intent);
+							}
 						}
 					}
-					marker.hideInfoWindow();
-				}
+				});
 
-
-				return true;
 			}
 		});
 
-
-		map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
-
-			@Override
-			public void onInfoWindowClick(Marker marker) {
-				for(final RentalLocation rental : locations){
-					if(marker.getTitle().equals(rental.getTitle())){
-						Intent intent = new Intent("android.intent.action.VIEW");
-						intent.setData(Uri.parse(rental.getUrl()));
-						startActivity(intent);
-					}
-				}
-			}
-		});
 
 
 		return v;

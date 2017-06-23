@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/call.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/call.png"
+    },
+    {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/fl.png",
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/fl.png"
     },
@@ -8,16 +12,8 @@
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/bg.png"
     },
     {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/map.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/map.png"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/t.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/t.png"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/w.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/w.png"
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/skype.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/skype.png"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/rent.png",
@@ -36,10 +32,6 @@
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/g.png"
     },
     {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/info_tab.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/info_tab.png"
-    },
-    {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/lj.png",
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/lj.png"
     },
@@ -50,18 +42,6 @@
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/v.png",
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/v.png"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/info_tab_selected.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/info_tab_selected.png"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/social.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/social.png"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/social_open.png",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/social_open.png"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/f.png",
@@ -82,5 +62,49 @@
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/yt.png",
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/yt.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/whatsapp.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/messanger.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/messanger.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/user.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/user.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/map.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/map.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/t.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/t.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/w.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/w.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/info_tab.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/info_tab.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/viber.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/viber.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/info_tab_selected.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/info_tab_selected.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/social.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/social.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-xxhdpi/social_open.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-xxhdpi/social_open.png"
     }
 ]

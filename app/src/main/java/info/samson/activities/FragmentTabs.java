@@ -15,8 +15,11 @@ import info.samson.helpers.Constans;
 import info.samson.helpers.Utils;
 
 import android.Manifest;
+import android.animation.AnimatorSet;
+import android.content.ContentUris;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -26,17 +29,21 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
@@ -45,11 +52,14 @@ import com.github.clans.fab.FloatingActionMenu;
 import java.util.ArrayList;
 import java.util.List;
 
+import static info.samson.helpers.Constans.PERMISSIONS_REQUEST_READ_CONTACTS;
+
 /**
  * TODO
  */
 public class FragmentTabs extends AppCompatActivity {
 
+    private static final String TAG = FragmentTabs.class.getSimpleName();
     private DrawerLayout mDrawerLayout;
     private TabLayout mTabLayout;
 
@@ -69,51 +79,99 @@ public class FragmentTabs extends AppCompatActivity {
 
     private void initFloatingBtn() {
         FloatingActionMenu materialDesignFAM;
-        FloatingActionButton whatsAppBtn, viberAppBtn, floatingActionButton3;
+        FloatingActionButton whatsAppBtn, callAppBtn, messangerAppBtn,skypeAppBtn;
 
 
             materialDesignFAM = (FloatingActionMenu) findViewById(R.id.material_design_android_floating_action_menu);
+            materialDesignFAM.setMenuButtonColorNormal(getResources().getColor(R.color.app_color));
+            materialDesignFAM.setMenuButtonColorPressed(getResources().getColor(R.color.app_color_transparent));
+
             whatsAppBtn = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item1);
-            viberAppBtn = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item2);
-            floatingActionButton3 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item3);
+            callAppBtn = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item2);
+            messangerAppBtn = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item3);
+            skypeAppBtn = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item4);
 
             whatsAppBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Utils.openWhatsappContact("972547549913", FragmentTabs.this);
                 }
             });
-            viberAppBtn.setOnClickListener(new View.OnClickListener() {
+            callAppBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Utils.openViber("972547549913", FragmentTabs.this);
+                   Utils.call(FragmentTabs.this);
+
                 }
             });
-            floatingActionButton3.setOnClickListener(new View.OnClickListener() {
+            messangerAppBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+                    Uri uri = Uri.parse("fb-messenger://user/");
+                    uri = ContentUris.withAppendedId(uri,730267485);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
                 }
             });
+
+            skypeAppBtn.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utils.initiateSkypeUri(FragmentTabs.this, "skype:asya.liverant?chat");
+                 }
+             });
         }
 
 
-    private void initTabLayout(ViewPager viewPager) {
+    private void initTabLayout(final ViewPager viewPager) {
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
         mTabLayout.setupWithViewPager(viewPager);
 
         View tab_rentals = getLayoutInflater().inflate(R.layout.custom_tab, null);
         tab_rentals.findViewById(R.id.icon).setBackgroundResource(R.drawable.rent);
         mTabLayout.getTabAt(0).setCustomView(tab_rentals);
+        tab_rentals.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                viewPager.setCurrentItem(0,false);
+            }
+        });
 
         View tab_mail = getLayoutInflater().inflate(R.layout.custom_tab, null);
         tab_mail.findViewById(R.id.icon).setBackgroundResource(R.drawable.mailselector);
         mTabLayout.getTabAt(1).setCustomView(tab_mail);
-//        mTabLayout.getTabAt(2).setIcon(R.drawable.map)//TODO
+        tab_mail.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                viewPager.setCurrentItem(1,false);
+            }
+        });
 
-        View tab_social = getLayoutInflater().inflate(R.layout.custom_tab, null);
-        tab_social.findViewById(R.id.icon).setBackgroundResource(R.drawable.socialselector);
-        mTabLayout.getTabAt(2).setCustomView(tab_social);
+        View tab_map = getLayoutInflater().inflate(R.layout.custom_tab, null);
+        tab_map.findViewById(R.id.icon).setBackgroundResource(R.drawable.map);
+//        mTabLayout.getTabAt(2).setCustomView(tab_social);
+        mTabLayout.getTabAt(2).setCustomView(tab_map);//TODO
+        tab_map.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                viewPager.setCurrentItem(2,false);
+            }
+        });
 
         View tab_info = getLayoutInflater().inflate(R.layout.custom_tab, null);
         tab_info.findViewById(R.id.icon).setBackgroundResource(R.drawable.infoselector);
         mTabLayout.getTabAt(3).setCustomView(tab_info);
+        tab_info.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                viewPager.setCurrentItem(3,false);
+            }
+        });
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -129,33 +187,32 @@ public class FragmentTabs extends AppCompatActivity {
         return true;
     }
 
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == Constans.PERMISSIONS_REQUEST_READ_CONTACTS) {
-            for (int i = 0; i < permissions.length; i++) {
-                String permission = permissions[i];
-                int grantResult = grantResults[i];
-
-                if (permission.equals(Manifest.permission.SEND_SMS)) {
-                    if (grantResult == PackageManager.PERMISSION_GRANTED) {
-
-                    } else {
-                        ActivityCompat.requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, new String[]{Constans.PERMISSIONS_REQUEST_READ_CONTACTS});
-                    }
-                }
-            }
-        }
-    }
-
-    private void setupViewPager(ViewPager viewPager) {
+    private void setupViewPager(final ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new RentFrag(), "Category 1");
         adapter.addFragment(new MailFrag(), "Category 2");
-//        adapter.addFragment(new MapFrag(), "Category 3");
-        adapter.addFragment(new SocialFrag(), "Category 3");
+        adapter.addFragment(new MapFrag(), "Category 3");
+//        adapter.addFragment(new SocialFrag(), "Category 3");
         adapter.addFragment(new InfoFrag(), "Category 4");
         viewPager.setAdapter(adapter);
+        viewPager.removeOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                viewPager.setCurrentItem(position, true);
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
 }

@@ -12,15 +12,21 @@ import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import info.samson.activities.FragmentTabs;
 
 public class Utils {
     public static void CopyStream(InputStream is, OutputStream os)
@@ -89,14 +95,17 @@ public class Utils {
         }
     }
 
-    private static  Uri getUriFromPhoneNumber(String phoneNumber, Context context) {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context.checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-            ((Activity)context).requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, Constans.PERMISSIONS_REQUEST_READ_CONTACTS);
-            //After this point you wait for callback in onRequestPermissionsResult(int, String[], int[]) overriden method
+    public static void checkPermissions(Activity activity){
+        if (ContextCompat.checkSelfPermission(activity,Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,new String[]{Manifest.permission.READ_CONTACTS}, Constans.PERMISSIONS_REQUEST_READ_CONTACTS);
         } else {
-            // Android version is lesser than 6.0 or the permission is already granted.
-            Uri uri = null;
+            Utils.openViber("972547549913", activity);
+        }
+    }
+
+    private static  Uri getUriFromPhoneNumber(String phoneNumber, Context context) {
+        Uri uri = null;
+
             String contactId = getContactIdByPhoneNumber(phoneNumber, context);
             if (!TextUtils.isEmpty(contactId)) {
                 Cursor cursor = context.getContentResolver().query(
@@ -114,8 +123,7 @@ public class Utils {
                     cursor.close();
                 }
             }
-            return uri;
-        }
+        return uri;
     }
 
     private static String getContactIdByPhoneNumber(String phoneNumber, Context context) {
@@ -145,8 +153,68 @@ public class Utils {
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setPackage("com.viber.voip");
         share.setType("text/plain");
-        share.setData( getUriFromPhoneNumber("+972549138914",activity));
+        share.setData(Uri.parse("sms:+972547549913"));
+//        share.setData( getUriFromPhoneNumber("+972549138914",activity));
         share.putExtra(Intent.EXTRA_TEXT, "Your text to share");
         activity.startActivity(share);
+    }
+
+    public static void call(Activity activity) {
+        if (((TelephonyManager)activity.getSystemService(Context.TELEPHONY_SERVICE)).getPhoneType() == 0)
+        {
+            Toast.makeText(activity, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0435 \u0437\u0432\u043E\u043D\u043A\u0438 \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044E\u0442\u0441\u044F", 1);
+            Intent intent1 = new Intent("android.intent.action.VIEW");
+            intent1.setData(Uri.parse("http://israelrent.info/index/contacts/0-12"));
+            activity.startActivity(intent1);
+
+        } else
+        {
+            callPhone("+972547549913", activity);
+        }
+    }
+
+    private static void callPhone(String s, Activity activity) {
+        activity.startActivity(new Intent("android.intent.action.CALL", Uri.parse((new StringBuilder("tel:")).append(s).toString())));
+    }
+
+    public static void initiateSkypeUri(Activity activity, String s)
+    {
+
+        if (!isSkypeClientInstalled(activity))
+        {
+            goToMarket(activity);
+            return;
+        } else
+        {
+//            Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(s));
+//            intent.setComponent(new ComponentName("com.skype.raider", "com.skype.raider.Main"));
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            activity.startActivity(intent);
+//            return;
+            Intent sky = new Intent("android.intent.action.VIEW");
+            sky.setData(Uri.parse(s));
+            activity.startActivity(sky);
+        }
+    }
+
+    /**
+     * Determine whether the Skype for Android client is installed on this device.
+     */
+    private static boolean isSkypeClientInstalled(Context myContext) {
+        PackageManager myPackageMgr = myContext.getPackageManager();
+        try {
+            myPackageMgr.getPackageInfo("com.skype.raider", PackageManager.GET_ACTIVITIES);
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            return (false);
+        }
+        return (true);
+    }
+
+
+    private static  void goToMarket(Context context)
+    {
+        Intent intent = new Intent("android.intent.action.VIEW", Uri.parse("market://details?id=com.skype.raider"));
+        context.startActivity(intent);
     }
 }

@@ -69,4 +69,10 @@
 
     </style>
 
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="elevation">4dp</item>
+    </style>
+
 </resources>

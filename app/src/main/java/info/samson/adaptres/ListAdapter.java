@@ -79,7 +79,7 @@ public class ListAdapter extends BaseAdapter
 
 		if (view == null)
 		{
-			view = ((LayoutInflater)mContext.getSystemService("layout_inflater")).inflate(R.layout.list_item, null);
+			view = ((LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.list_item, null);
 			holder = new ViewHolder();
 			holder.title = (TextView)view.findViewById(R.id.title);
 			holder.price = (TextView)view.findViewById(R.id.price);
@@ -97,7 +97,7 @@ public class ListAdapter extends BaseAdapter
 
 		
 
-		if(mIsRentals){   //		if(Utils.isAppInstalled("com.waze", mContext.getPackageManager())) {
+		if(mIsRentals){
 			holder.price.setVisibility(View.VISIBLE);
 			holder.googleMapsBtn.setVisibility(View.VISIBLE);
 			holder.googleMapsBtn.setOnClickListener(new OnClickListener() {
@@ -106,11 +106,9 @@ public class ListAdapter extends BaseAdapter
 				{
 					try
 					{
-//						String url = "waze://?q="+mImages[position].getAdress();
-//						Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
-//						mContext.startActivity( intent );
+
 						Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-								Uri.parse("http://maps.google.com/maps?saddr="+Uri.parse(mImages[position].getAdress())));
+								Uri.parse("google.navigation:q="+Uri.parse(mImages[position].getAdress())));
 						mContext.startActivity(intent);
 					}
 					catch ( ActivityNotFoundException ex  )
@@ -125,11 +123,11 @@ public class ListAdapter extends BaseAdapter
 			holder.price.setVisibility(View.GONE);
 			holder.googleMapsBtn.setVisibility(View.GONE);
 
-			FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(43, 43);
-			lp.setMargins(0, 8,8, 0);
-			lp.gravity=Gravity.RIGHT;
-		
-			holder.shareBtn.setLayoutParams(lp);
+//			FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(100, 100);
+//			lp.setMargins(0, 8,8, 0);
+//			lp.gravity=Gravity.RIGHT;
+//
+//			holder.shareBtn.setLayoutParams(lp);
 		}
 
 		
@@ -151,10 +149,6 @@ public class ListAdapter extends BaseAdapter
 		
 		holder.shareBtn.setOnClickListener(new OnClickListener() {
 
-			//final ListAdapter this$0;
-			//			private final ViewHolder val$holder;
-			//			private final int val$position;
-
 			public void onClick(View view1)
 			{
 				mImages[position].setSelected(true);
@@ -165,13 +159,6 @@ public class ListAdapter extends BaseAdapter
 				intent.putExtra("android.intent.extra.SUBJECT", mImages[position].getTitle());
 				mContext.startActivity(Intent.createChooser(intent, "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F"));
 				
-			}
-
-
-			{
-				//                this$0 = ListAdapter.this;
-				//                position = i;
-				//                holder = viewholder;
 			}
 		});
 		return view;
