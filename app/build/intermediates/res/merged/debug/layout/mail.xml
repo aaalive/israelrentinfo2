@@ -12,11 +12,23 @@
         android:orientation="vertical"
         >
 
+        <com.squareup.timessquare.CalendarPickerView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:clipToPadding="false"
+            android:background="#FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/btn_show_dates"/>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5.0dip"
             android:text="Выберите дату приезда:"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
             android:textAppearance="?android:textAppearanceLarge" />
 
@@ -33,14 +45,16 @@
             android:calendarViewShown="false"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:datePickerMode="calendar"
+            android:datePickerMode="spinner"
             android:calendarTextColor="@android:color/black"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5.0dip"
+            android:textColor="@android:color/black"
             android:text="Выберите дату  отъезда:"
+            android:textStyle="bold"
             android:textAppearance="?android:textAppearanceLarge" />
 
         <DatePicker
@@ -56,8 +70,9 @@
             android:calendarViewShown="false"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:datePickerMode="calendar"
+            android:datePickerMode="spinner"
             android:calendarTextColor="@android:color/black"
+            style="@style/SamsonDatePicker"
             />
 
         <RelativeLayout
@@ -70,9 +85,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textAppearance="?android:textAppearanceLarge"
                 android:paddingLeft="20.0dip"
                 android:text="Взрослых:"
                 android:textSize="20dp"
+
                 />
 
             <NumberPicker
@@ -90,6 +109,9 @@
                 android:layout_alignParentRight="true"
                 android:paddingRight="20.0dip"
                 android:text="Детей:"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textAppearance="?android:textAppearanceLarge"
                 android:textSize="20dp"/>
 
             <NumberPicker
@@ -106,6 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5.0dip"
             android:text="Сообщение:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:textAppearanceLarge" />
 
         <!--<android.support.design.widget.TextInputLayout-->

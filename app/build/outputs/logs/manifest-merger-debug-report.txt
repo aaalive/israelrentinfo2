@@ -17,25 +17,27 @@ ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/m
 		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/73025bad757ba49496e03026d62f4dfe8172e115/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/da149d8a58f13a3cb7a20cb02c9e20e00ccc0f49/output/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.2.0] /Users/anastasiya/.android/build-cache/5a1790080dab65f5e9bd42f331517a881255b8df/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.2.0] /Users/anastasiya/.android/build-cache/acf2b2ad870e0986d970f2841e361579b17e5acf/output/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:23:5-43
 MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/anastasiya/.android/build-cache/c45004a51dd472d7ad4bf54d5de6b7fe01fdfcaf/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.2.0] /Users/anastasiya/.android/build-cache/5f1ae3312b4c986307bc95bb0d5e85c5961282e3/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/anastasiya/.android/build-cache/66f48594dec576114ba03394028fb677dd666eb7/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/anastasiya/.android/build-cache/092d80d9c81688e35f1a8a5053e877335e7d0fd0/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/anastasiya/.android/build-cache/3bb4407b9a46570b6e9e7550e85f7d5a4fbc11c0/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/anastasiya/.android/build-cache/b8b882908bdab2d12bf72779bf498f1e225e2cc5/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/anastasiya/.android/build-cache/f66a30ead7046a92a3b346cc81f3f694929b0ebd/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.github.clans:fab:1.6.2] /Users/anastasiya/.android/build-cache/4b9c2e16a64a8c28c137cfcd4769febccc140c6b/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.wdullaer:materialdatetimepicker:3.2.2] /Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:design:25.3.1] /Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/08496e8cb45c44b4759835b72a9e2b251c386632/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/03215d3ca8adcf3a98f2693198468044bb809263/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/anastasiya/.android/build-cache/3e64a118f5db2d7e045fc1f820410e9f4e442e40/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/anastasiya/.android/build-cache/b997d43f457b858fe37a8a973c85d351edc34b85/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anastasiya/.android/build-cache/18cf5417b01dfe3585728a97ffe7bb3a9c611da0/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anastasiya/.android/build-cache/30e54c948f4f4e98916482e52b1912dbdd158b57/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anastasiya/.android/build-cache/d3b666d2b7f9e3b940846b545a2f62b561835e3a/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anastasiya/.android/build-cache/a7e1f3c92925a217537492bee35e0d15318fdb86/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anastasiya/.android/build-cache/f819f5636622047047ccdf6b316a0d0107149a70/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anastasiya/.android/build-cache/1fb1d4b985c638c1dd236ec78e82369a0bbed562/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:23:9-52
 	android:targetSdkVersion
 		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml
@@ -119,22 +121,24 @@ ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/m
 		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:35:9-34
 application
 ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:41:5-74:19
-MERGED from [com.android.support:design:25.2.0] /Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/73025bad757ba49496e03026d62f4dfe8172e115/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/anastasiya/.android/build-cache/da149d8a58f13a3cb7a20cb02c9e20e00ccc0f49/output/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.2.0] /Users/anastasiya/.android/build-cache/acf2b2ad870e0986d970f2841e361579b17e5acf/output/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/anastasiya/.android/build-cache/731bc7413b7a38d4e496267d7503b3a0f0a03e3a/output/AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/anastasiya/.android/build-cache/c45004a51dd472d7ad4bf54d5de6b7fe01fdfcaf/output/AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/anastasiya/.android/build-cache/6781218bb347eb12381da14ae3a10fce02a9886b/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.2.0] /Users/anastasiya/.android/build-cache/5f1ae3312b4c986307bc95bb0d5e85c5961282e3/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/anastasiya/.android/build-cache/66f48594dec576114ba03394028fb677dd666eb7/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/anastasiya/.android/build-cache/092d80d9c81688e35f1a8a5053e877335e7d0fd0/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/anastasiya/.android/build-cache/3bb4407b9a46570b6e9e7550e85f7d5a4fbc11c0/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/anastasiya/.android/build-cache/b8b882908bdab2d12bf72779bf498f1e225e2cc5/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/anastasiya/.android/build-cache/f66a30ead7046a92a3b346cc81f3f694929b0ebd/output/AndroidManifest.xml:25:5-20
 MERGED from [com.github.clans:fab:1.6.2] /Users/anastasiya/.android/build-cache/4b9c2e16a64a8c28c137cfcd4769febccc140c6b/output/AndroidManifest.xml:12:5-20
+MERGED from [com.wdullaer:materialdatetimepicker:3.2.2] /Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/08496e8cb45c44b4759835b72a9e2b251c386632/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/03215d3ca8adcf3a98f2693198468044bb809263/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/anastasiya/.android/build-cache/b997d43f457b858fe37a8a973c85d351edc34b85/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anastasiya/.android/build-cache/18cf5417b01dfe3585728a97ffe7bb3a9c611da0/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anastasiya/.android/build-cache/30e54c948f4f4e98916482e52b1912dbdd158b57/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anastasiya/.android/build-cache/d3b666d2b7f9e3b940846b545a2f62b561835e3a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anastasiya/.android/build-cache/a7e1f3c92925a217537492bee35e0d15318fdb86/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anastasiya/.android/build-cache/f819f5636622047047ccdf6b316a0d0107149a70/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anastasiya/.android/build-cache/1fb1d4b985c638c1dd236ec78e82369a0bbed562/output/AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from /Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/AndroidManifest.xml:45:9-41
 	android:allowBackup
@@ -202,3 +206,25 @@ ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/
 		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:86-145
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/anastasiya/.android/build-cache/9edae7a0385d69a54f11bfcf1d201c6691312a78/output/AndroidManifest.xml:19:19-85
+uses-permission#android.permission.VIBRATE
+ADDED from [com.wdullaer:materialdatetimepicker:3.2.2] /Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/AndroidManifest.xml:26:5-66
+	android:name
+		ADDED from [com.wdullaer:materialdatetimepicker:3.2.2] /Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/AndroidManifest.xml:26:22-63
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:design:25.3.1] /Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/08496e8cb45c44b4759835b72a9e2b251c386632/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anastasiya/.android/build-cache/03215d3ca8adcf3a98f2693198468044bb809263/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/anastasiya/.android/build-cache/3e64a118f5db2d7e045fc1f820410e9f4e442e40/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/anastasiya/.android/build-cache/b997d43f457b858fe37a8a973c85d351edc34b85/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anastasiya/.android/build-cache/18cf5417b01dfe3585728a97ffe7bb3a9c611da0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anastasiya/.android/build-cache/30e54c948f4f4e98916482e52b1912dbdd158b57/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anastasiya/.android/build-cache/d3b666d2b7f9e3b940846b545a2f62b561835e3a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anastasiya/.android/build-cache/a7e1f3c92925a217537492bee35e0d15318fdb86/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anastasiya/.android/build-cache/f819f5636622047047ccdf6b316a0d0107149a70/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anastasiya/.android/build-cache/1fb1d4b985c638c1dd236ec78e82369a0bbed562/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/anastasiya/.android/build-cache/cec268d3980ce8d778021460e04884c6f2018544/output/AndroidManifest.xml:26:9-47

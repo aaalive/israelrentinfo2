@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,8 +28,9 @@ public class InfoFrag extends Fragment
 	private ImageType mImages[];
 	private ArrayList<Boolean> mInfoStarred;
 	SamsonApp mApp;
-	
-	
+	private Parcelable mState;
+	public ListView mListview;
+
 	public InfoFrag()
 	{
 	}
@@ -46,8 +48,9 @@ public class InfoFrag extends Fragment
 		int i=0;
 		for (ImageType image:mImages){
 			mInfoStarred.add(i, mImages[i].isSelected());
-			i++;		
+			i++;
 		}
+		mState = mListview.onSaveInstanceState(); //line 1
 		mApp.putListBoolean(SamsonApp.INFO_STARRED_LIST, mInfoStarred);
 		super.onStop();
 
@@ -69,8 +72,7 @@ public class InfoFrag extends Fragment
 	{
 		super.onStart();
 		mInfoStarred = mApp.getListBoolean(SamsonApp.INFO_STARRED_LIST);
-
-		ListView listview = (ListView)getView().findViewById(R.id.rentals_list);
+		mListview = (ListView)getView().findViewById(R.id.rentals_list);
 		ImageType aimagetype[] = new ImageType[16];
 		aimagetype[0] = new ImageType("http://israelrent.info/news/nashi_kontakty/2013-12-08-36#.U4bovPmSwxM", "http://israelrent.ucoz.de/_nw/0/s92610238.jpg", "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0435 \u043C\u0435\u0441\u0442\u0430 \u043F\u043E\u043A\u0443\u043F\u043E\u043A \u0438 \u043E\u0442\u0434\u044B\u0445\u0430 \u0432 \u0410\u0448\u043A\u0435\u043B\u043E\u043D\u0435", 0);
 		aimagetype[1] = new ImageType("http://israelrent.info/news/kratkosrochnaja_arenda_kvartiry_v_ashkelone_i_poleznye_sovety_turistu_v_izraile/2013-07-12-30#.U4bqfPmSwxM", "http://israelrent.ucoz.de/_nw/0/s50269290.jpg", "\u0410\u0448\u043A\u0435\u043B\u043E\u043D \u0438 \u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0435 \u0441\u043E\u0432\u0435\u0442\u044B \u0442\u0443\u0440\u0438\u0441\u0442\u0443 \u0432 \u0418\u0437\u0440\u0430\u0438\u043B\u0435", 0);
@@ -99,8 +101,8 @@ public class InfoFrag extends Fragment
 			}
 		}
 
-		listview.setAdapter(new ListAdapter(getActivity(), getActivity(), mImages, false));
-		listview.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+		mListview.setAdapter(new ListAdapter(getActivity(), getActivity(), mImages, false));
+		mListview.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
 
 			final InfoFrag this$0;
 
@@ -117,6 +119,9 @@ public class InfoFrag extends Fragment
 				// super();
 			}
 		});
+		if (mState != null) {
+			mListview.onRestoreInstanceState(mState);
+		}
 	}
 
 }

@@ -1,6 +1,10 @@
 [
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+        "source": "/Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/mdtp_date_picker_dialog.xml",
+        "source": "/Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/res/layout-sw600dp-v13/mdtp_date_picker_dialog.xml"
     }
 ]

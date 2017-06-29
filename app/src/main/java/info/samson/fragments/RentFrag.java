@@ -6,9 +6,11 @@ package info.samson.fragments;
 
 import java.util.ArrayList;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.util.Log;
@@ -29,6 +31,8 @@ public class RentFrag extends Fragment
 	private SamsonApp app;
 	private SamsonApp mApp;
 	private ArrayList<Boolean> mRentStarred;
+	private Parcelable mState;
+	private ListView mListview;
 
 	public RentFrag()
 	{
@@ -51,9 +55,12 @@ public class RentFrag extends Fragment
 			i++;		
 		}
 		mApp.putListBoolean(SamsonApp.RENT_STARRED_LIST, mRentStarred);
+		mState = mListview.onSaveInstanceState(); //line 1
 		super.onStop();
 
 	}
+
+
 
 	public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
 	{
@@ -69,7 +76,8 @@ public class RentFrag extends Fragment
 	public void onStart()
 	{
 		super.onStart();
-		ListView listview = (ListView)getView().findViewById(R.id.rentals_list);
+		mListview = (ListView)getView().findViewById(R.id.rentals_list);
+
 		final ImageType [] mImagesA= {
 				new ImageType("http://israelrent.info/index/laguna/0-32", "http://israelrent.ucoz.de/_si/0/84297969.jpg", "\"Laguna\" 2 \u043A\u043E\u043C\u043D\u0430\u0442\u044B", 65, " Ashkelon, 33 Yefe Nof, Israel"),
 				new ImageType("http://israelrent.info/index/paradise/0-24#.U4V5yPmSwxM", "http://israelrent.info/Apartments/sky_salon_tv.jpg", "\"Sky\" 3 \u043A\u043E\u043C\u043D\u0430\u0442\u044B", 75, "Ashkelon, 33 Yefe Nof, Israel"),
@@ -101,10 +109,11 @@ public class RentFrag extends Fragment
 			}
 		}
 
-		listview.setAdapter(new ListAdapter(getActivity(), getActivity(), mImages, true));
-		listview.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+		//set adapter to listview
+		mListview.setAdapter(new ListAdapter(getActivity(), getActivity(), mImages, true));
+		mListview.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
 
-			final RentFrag this$0;
+			final RentFrag mRentFrag;
 
 			public void onItemClick(AdapterView adapterview, View view, int i, long l)
 			{
@@ -115,10 +124,14 @@ public class RentFrag extends Fragment
 
 
 			{
-				this$0 = RentFrag.this;
-				// super();
+                mRentFrag = RentFrag.this;
 			}
-		});
+		});			//Restore previous state
+
+		if (mState != null) {
+			mListview.onRestoreInstanceState(mState);
+		}
+
 	}
 
 }

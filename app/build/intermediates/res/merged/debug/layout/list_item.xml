@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="5.0dip"
-        android:src="@drawable/stub"
+        android:src="@drawable/stub1"
 />
 
     <TextView
