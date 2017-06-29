@@ -12,15 +12,6 @@
         android:orientation="vertical"
         >
 
-        <com.squareup.timessquare.CalendarPickerView
-            android:id="@+id/calendar_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbarStyle="outsideOverlay"
-            android:clipToPadding="false"
-            android:background="#FFFFFF"
-            android:layout_alignParentTop="true"
-            android:layout_above="@+id/btn_show_dates"/>
 
 
         <TextView

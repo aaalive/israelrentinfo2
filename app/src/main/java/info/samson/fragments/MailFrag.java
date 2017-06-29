@@ -20,7 +20,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.timessquare.CalendarPickerView;
+//import com.squareup.timessquare.CalendarPickerView;
 
 import info.samson.R;
 import info.samson.helpers.Helper;
@@ -85,7 +85,53 @@ public class MailFrag extends Fragment {
 
                     final MailFrag this$0;
 
-                    public void onClick(View view) {
+
+
+                        // Show a datepicker when the dateButton is clicked
+                        dateButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Calendar now = Calendar.getInstance();
+                                DatePickerDialog dpd = DatePickerDialog.newInstance(
+                                        DatePickerFragment.this,
+                                        now.get(Calendar.YEAR),
+                                        now.get(Calendar.MONTH),
+                                        now.get(Calendar.DAY_OF_MONTH)
+                                );
+                                dpd.setThemeDark(modeDarkDate.isChecked());
+                                dpd.vibrate(vibrateDate.isChecked());
+                                dpd.dismissOnPause(dismissDate.isChecked());
+                                dpd.showYearPickerFirst(showYearFirst.isChecked());
+                                dpd.setVersion(showVersion2.isChecked() ? DatePickerDialog.Version.VERSION_2 : DatePickerDialog.Version.VERSION_1);
+                                if (modeCustomAccentDate.isChecked()) {
+                                    dpd.setAccentColor(Color.parseColor("#9C27B0"));
+                                }
+                                if (titleDate.isChecked()) {
+                                    dpd.setTitle("DatePicker Title");
+                                }
+                                if (highlightDays.isChecked()) {
+                                    Calendar date1 = Calendar.getInstance();
+                                    Calendar date2 = Calendar.getInstance();
+                                    date2.add(Calendar.WEEK_OF_MONTH, -1);
+                                    Calendar date3 = Calendar.getInstance();
+                                    date3.add(Calendar.WEEK_OF_MONTH, 1);
+                                    Calendar[] days = {date1, date2, date3};
+                                    dpd.setHighlightedDays(days);
+                                }
+                                if (limitSelectableDays.isChecked()) {
+                                    Calendar[] days = new Calendar[13];
+                                    for (int i = -6; i < 7; i++) {
+                                        Calendar day = Calendar.getInstance();
+                                        day.add(Calendar.DAY_OF_MONTH, i * 2);
+                                        days[i + 6] = day;
+                                    }
+                                    dpd.setSelectableDays(days);
+                                }
+                                dpd.show(getFragmentManager(), "Datepickerdialog");
+                            }
+                        };
+
+
                         Date date = new Date(-1900 + mCheckOut.getYear(), mCheckOut.getMonth(), mCheckOut.getDayOfMonth());
                         String s = (new StringBuilder(String.valueOf(Helper.getDateDiffString(new Date(-1900 + mCheckIn.getYear(), mCheckIn.getMonth(), mCheckIn.getDayOfMonth()), date)))).append(" \u043D\u043E\u0447\u0435\u0439: ").append(Helper.getDateFromDatePicket(mCheckIn)).append("-").append(Helper.getDateFromDatePicket(mCheckOut)).append(";").append(mAdults.getValue()).append("+").append(mKids.getValue()).toString();
                         String s1 = mEmailBody.getText().toString();
@@ -97,10 +143,7 @@ public class MailFrag extends Fragment {
                         intent.putExtra("android.intent.extra.TEXT", s1);
                         intent.setType("message/rfc822");
                         startActivity(Intent.createChooser(intent, "Choose an Email client"));
-                    }
-
-
-                    {
+                    
                         this$0 = MailFrag.this;
                         //      super();
                     }
@@ -113,32 +156,33 @@ public class MailFrag extends Fragment {
     }
 
     private void initCalendar() {
-        final CalendarPickerView calendar_view = (CalendarPickerView) getView().findViewById(R.id.calendar_view);
-//getting current
-        Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.YEAR, 1);
-        Date today = new Date();
 
-//add one year to calendar from todays date
-        calendar_view.init(today, nextYear.getTime())
-                .inMode(CalendarPickerView.SelectionMode.RANGE);
-
-
-        //action while clicking on a date
-        calendar_view.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
-            @Override
-            public void onDateSelected(Date date) {
-
-                Toast.makeText(getActivity(), "Selected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onDateUnselected(Date date) {
-
-                Toast.makeText(getActivity(), "UnSelected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        final CalendarPickerView calendar_view = (CalendarPickerView) getView().findViewById(R.id.calendar_view);
+////getting current
+//        Calendar nextYear = Calendar.getInstance();
+//        nextYear.add(Calendar.YEAR, 1);
+//        Date today = new Date();
+//
+////add one year to calendar from todays date
+//        calendar_view.init(today, nextYear.getTime())
+//                .inMode(CalendarPickerView.SelectionMode.RANGE);
+//
+//
+//        //action while clicking on a date
+//        calendar_view.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
+//            @Override
+//            public void onDateSelected(Date date) {
+//
+//                Toast.makeText(getActivity(), "Selected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//            @Override
+//            public void onDateUnselected(Date date) {
+//
+//                Toast.makeText(getActivity(), "UnSelected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
     }
