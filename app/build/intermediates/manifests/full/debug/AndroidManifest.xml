@@ -43,12 +43,6 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="25.3.1" />
-
     <application
         android:name="info.samson.activities.SamsonApp"
         android:allowBackup="true"

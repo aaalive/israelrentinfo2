@@ -7,6 +7,7 @@ package info.samson.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.NumberPicker;
@@ -22,11 +24,22 @@ import android.widget.Toast;
 
 //import com.squareup.timessquare.CalendarPickerView;
 
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.CalendarMode;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnRangeSelectedListener;
+
 import info.samson.R;
 import info.samson.helpers.Helper;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
+
+import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.SELECTION_MODE_RANGE;
 
 public class MailFrag extends Fragment {
 
@@ -35,6 +48,9 @@ public class MailFrag extends Fragment {
     private DatePicker mCheckOut;
     private EditText mEmailBody;
     private NumberPicker mKids;
+    private int mPrevYear;
+    private int mPrevMonth;
+    private int mPrevDay;
 
     public MailFrag() {
         mEmailBody = null;
@@ -82,56 +98,8 @@ public class MailFrag extends Fragment {
                 mKids.setDisplayedValues(as);
                 mKids.setValue(0);
                 ((Button) getActivity().findViewById(R.id.button1)).setOnClickListener(new android.view.View.OnClickListener() {
-
-                    final MailFrag this$0;
-
-
-
-                        // Show a datepicker when the dateButton is clicked
-                        dateButton.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Calendar now = Calendar.getInstance();
-                                DatePickerDialog dpd = DatePickerDialog.newInstance(
-                                        DatePickerFragment.this,
-                                        now.get(Calendar.YEAR),
-                                        now.get(Calendar.MONTH),
-                                        now.get(Calendar.DAY_OF_MONTH)
-                                );
-                                dpd.setThemeDark(modeDarkDate.isChecked());
-                                dpd.vibrate(vibrateDate.isChecked());
-                                dpd.dismissOnPause(dismissDate.isChecked());
-                                dpd.showYearPickerFirst(showYearFirst.isChecked());
-                                dpd.setVersion(showVersion2.isChecked() ? DatePickerDialog.Version.VERSION_2 : DatePickerDialog.Version.VERSION_1);
-                                if (modeCustomAccentDate.isChecked()) {
-                                    dpd.setAccentColor(Color.parseColor("#9C27B0"));
-                                }
-                                if (titleDate.isChecked()) {
-                                    dpd.setTitle("DatePicker Title");
-                                }
-                                if (highlightDays.isChecked()) {
-                                    Calendar date1 = Calendar.getInstance();
-                                    Calendar date2 = Calendar.getInstance();
-                                    date2.add(Calendar.WEEK_OF_MONTH, -1);
-                                    Calendar date3 = Calendar.getInstance();
-                                    date3.add(Calendar.WEEK_OF_MONTH, 1);
-                                    Calendar[] days = {date1, date2, date3};
-                                    dpd.setHighlightedDays(days);
-                                }
-                                if (limitSelectableDays.isChecked()) {
-                                    Calendar[] days = new Calendar[13];
-                                    for (int i = -6; i < 7; i++) {
-                                        Calendar day = Calendar.getInstance();
-                                        day.add(Calendar.DAY_OF_MONTH, i * 2);
-                                        days[i + 6] = day;
-                                    }
-                                    dpd.setSelectableDays(days);
-                                }
-                                dpd.show(getFragmentManager(), "Datepickerdialog");
-                            }
-                        };
-
-
+                    public void onClick(View v) {
+                        final MailFrag this$0;
                         Date date = new Date(-1900 + mCheckOut.getYear(), mCheckOut.getMonth(), mCheckOut.getDayOfMonth());
                         String s = (new StringBuilder(String.valueOf(Helper.getDateDiffString(new Date(-1900 + mCheckIn.getYear(), mCheckIn.getMonth(), mCheckIn.getDayOfMonth()), date)))).append(" \u043D\u043E\u0447\u0435\u0439: ").append(Helper.getDateFromDatePicket(mCheckIn)).append("-").append(Helper.getDateFromDatePicket(mCheckOut)).append(";").append(mAdults.getValue()).append("+").append(mKids.getValue()).toString();
                         String s1 = mEmailBody.getText().toString();
@@ -143,7 +111,7 @@ public class MailFrag extends Fragment {
                         intent.putExtra("android.intent.extra.TEXT", s1);
                         intent.setType("message/rfc822");
                         startActivity(Intent.createChooser(intent, "Choose an Email client"));
-                    
+
                         this$0 = MailFrag.this;
                         //      super();
                     }
@@ -157,35 +125,46 @@ public class MailFrag extends Fragment {
 
     private void initCalendar() {
 
-//        final CalendarPickerView calendar_view = (CalendarPickerView) getView().findViewById(R.id.calendar_view);
-////getting current
-//        Calendar nextYear = Calendar.getInstance();
-//        nextYear.add(Calendar.YEAR, 1);
-//        Date today = new Date();
-//
-////add one year to calendar from todays date
-//        calendar_view.init(today, nextYear.getTime())
-//                .inMode(CalendarPickerView.SelectionMode.RANGE);
-//
-//
-//        //action while clicking on a date
-//        calendar_view.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
-//            @Override
-//            public void onDateSelected(Date date) {
-//
-//                Toast.makeText(getActivity(), "Selected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
-//
-//            }
-//
-//            @Override
-//            public void onDateUnselected(Date date) {
-//
-//                Toast.makeText(getActivity(), "UnSelected Date is : " + date.toString(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        final CalendarView simpleCalendarView = (CalendarView) getView().findViewById(R.id.simpleCalendarView); // get the reference of CalendarView
+        simpleCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                if(mPrevYear!=year& mPrevMonth!=month& mPrevDay!=dayOfMonth) {
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss" );
+                    sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+                    Date date = null;
+                    try {
+                        date = sdf.parse(year+"-"+month+"-"+(dayOfMonth-3)+" 00:00:00");
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("in milliseconds: " + date.getDate());
+                }
+
+                mPrevYear=year;
+                mPrevMonth = month;
+                mPrevDay = dayOfMonth;
+            }
+        });
+        long selectedDate = simpleCalendarView.getDate(); // get selected date in milliseconds
+
+        @MaterialCalendarView.SelectionMode
+        MaterialCalendarView mcv = (MaterialCalendarView) getView().findViewById(R.id.calendarView);
+                mcv.state().edit()
+                .setFirstDayOfWeek(Calendar.SUNDAY)
+                .commit();
+        mcv.setSelectionMode(SELECTION_MODE_RANGE);
+        mcv.setOnRangeSelectedListener(new OnRangeSelectedListener() {
+            @Override
+            public void onRangeSelected(@NonNull MaterialCalendarView widget, @NonNull List<CalendarDay> dates) {
+                for(CalendarDay date:dates) {
+                    widget.setDateSelected(date,true);
+                }
+        } });
+
 
 
     }
-
 
 }

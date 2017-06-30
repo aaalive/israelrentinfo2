@@ -1,11 +1,11 @@
 [
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_primary_text_material_light.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_secondary_text_material_light.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
@@ -13,15 +13,15 @@
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_hint_foreground_material_dark.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_btn_colored_borderless_text_material.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/calendar_text_selector.xml",
@@ -37,27 +37,35 @@
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/switch_thumb_material_light.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/mcv_text_date_light.xml",
+        "source": "/Users/anastasiya/.android/build-cache/9abaf01eb524f524ba59b4b82241723e5f50d352/output/res/color/mcv_text_date_light.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_btn_checkable.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_btn_checkable.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/res/color/design_error.xml"
+        "source": "/Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/mcv_text_date_dark.xml",
+        "source": "/Users/anastasiya/.android/build-cache/9abaf01eb524f524ba59b4b82241723e5f50d352/output/res/color/mcv_text_date_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_switch_track.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_switch_track.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_spinner.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_spinner.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_seek_thumb.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
@@ -65,23 +73,23 @@
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_search_url_text.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_primary_text_material_dark.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_switch_thumb.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_switch_thumb.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_default.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_default.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
-        "source": "/Users/anastasiya/.android/build-cache/327f9fd3c3b5d4d4f8019bd5bcc966953c492c5f/output/res/color/design_tint_password_toggle.xml"
+        "source": "/Users/anastasiya/.android/build-cache/5ded1ee8c311b1741a613ec6f3ef8f2d01025591/output/res/color/design_tint_password_toggle.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
@@ -93,19 +101,19 @@
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_hint_foreground_material_light.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/switch_thumb_material_dark.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/switch_thumb_material_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_btn_colored_text_material.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_btn_colored_text_material.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/mdtp_date_picker_selector.xml",
@@ -113,10 +121,10 @@
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_secondary_text_material_dark.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f3bf690a48bfebda871e00e1a78031f2bf56edb5/output/res/color/abc_tint_edittext.xml"
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/color/abc_tint_edittext.xml"
     }
 ]
