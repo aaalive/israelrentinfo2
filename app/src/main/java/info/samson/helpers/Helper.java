@@ -23,6 +23,14 @@ public class Helper
         long l = date.getTime();
         return (new StringBuilder(String.valueOf((date1.getTime() - l) / 0x5265c00L))).toString();
     }
+    public static int getDateDiff(Date startDate, Date endDate) {
+        long diff = endDate.getTime() - startDate.getTime();
+        long diffSeconds = diff / 1000 % 60;
+        long diffMinutes = diff / (60 * 1000) % 60;
+        long diffHours = diff / (60 * 60 * 1000);
+        int diffInDays = (int) ((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+        return diffInDays;
+    }
 
     public static String getDateFromDatePicket(DatePicker datepicker)
     {

@@ -2,5 +2,9 @@
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-ldpi/stub1.png",
         "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-ldpi/stub1.png"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-ldpi/substract.png",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/drawable-ldpi/substract.png"
     }
 ]

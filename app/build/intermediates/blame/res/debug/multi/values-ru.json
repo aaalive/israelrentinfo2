@@ -735,11 +735,11 @@
                 "from": {
                     "file": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/values-ru/strings.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 160,
+                        "startOffset": 107,
                         "endColumn": 52,
-                        "endOffset": 208
+                        "endOffset": 155
                     }
                 }
             },
@@ -1090,27 +1090,8 @@
                     "startLine": 59,
                     "startColumn": 4,
                     "startOffset": 5766,
-                    "endColumn": 52,
-                    "endOffset": 5814
-                },
-                "from": {
-                    "file": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/values-ru/strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 107,
-                        "endColumn": 52,
-                        "endOffset": 155
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 60,
-                    "startColumn": 4,
-                    "startOffset": 5819,
                     "endColumn": 80,
-                    "endOffset": 5895
+                    "endOffset": 5842
                 },
                 "from": {
                     "file": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/values-ru/values-ru.xml",
@@ -1125,11 +1106,11 @@
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 5900,
+                    "startOffset": 5847,
                     "endColumn": 100,
-                    "endOffset": 5996
+                    "endOffset": 5943
                 },
                 "from": {
                     "file": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/values-ru/values-ru.xml",

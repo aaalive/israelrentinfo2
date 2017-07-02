@@ -4,10 +4,6 @@
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-v21/mdtp_material_button_selected.xml",
-        "source": "/Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/res/drawable-v21/mdtp_material_button_selected.xml"
-    },
-    {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/drawable-v21/abc_edit_text_material.xml"
     },
@@ -34,9 +30,5 @@
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/drawable-v21/notification_action_background.xml"
-    },
-    {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/drawable-v21/mdtp_material_button_background.xml",
-        "source": "/Users/anastasiya/.android/build-cache/b2532c37a225d3994f08dcde185b125d83b715f6/output/res/drawable-v21/mdtp_material_button_background.xml"
     }
 ]

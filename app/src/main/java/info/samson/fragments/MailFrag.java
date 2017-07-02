@@ -1,10 +1,12 @@
 // Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
 // Jad home page: http://www.geocities.com/kpdus/jad.html
-// Decompiler options: braces fieldsfirst space lnc 
+// Decompiler options: braces fieldsfirst space lnc
 
 package info.samson.fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
@@ -27,6 +29,7 @@ import android.widget.Toast;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.CalendarMode;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.OnRangeSelectedListener;
 
 import info.samson.R;
@@ -41,6 +44,7 @@ import java.util.TimeZone;
 
 import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.SELECTION_MODE_RANGE;
 
+
 public class MailFrag extends Fragment {
 
     private NumberPicker mAdults;
@@ -51,6 +55,9 @@ public class MailFrag extends Fragment {
     private int mPrevYear;
     private int mPrevMonth;
     private int mPrevDay;
+    private CalendarDay mStartDay;
+    private CalendarDay mEndDay;
+    private int mAdultsNum;
 
     public MailFrag() {
         mEmailBody = null;
@@ -77,26 +84,9 @@ public class MailFrag extends Fragment {
     public void onStart() {
         super.onStart();
         initCalendar();
+        initNumOfPeople();
         mEmailBody = (EditText) getView().findViewById(R.id.emailBody);
-        mCheckIn = (DatePicker) getView().findViewById(R.id.checkIn);
 
-        mCheckOut = (DatePicker) getView().findViewById(R.id.checkOut);
-        mAdults = (NumberPicker) getView().findViewById(R.id.adults);
-        mKids = (NumberPicker) getView().findViewById(R.id.kids);
-        String as[] = new String[11];
-        int i = 0;
-        do {
-            if (i >= as.length) {
-                mAdults.setMinValue(0);
-                mAdults.setMaxValue(10);
-                mAdults.setWrapSelectorWheel(true);
-                mAdults.setDisplayedValues(as);
-                mAdults.setValue(1);
-                mKids.setMinValue(0);
-                mKids.setMaxValue(10);
-                mKids.setWrapSelectorWheel(true);
-                mKids.setDisplayedValues(as);
-                mKids.setValue(0);
                 ((Button) getActivity().findViewById(R.id.button1)).setOnClickListener(new android.view.View.OnClickListener() {
                     public void onClick(View v) {
                         final MailFrag this$0;
@@ -117,54 +107,80 @@ public class MailFrag extends Fragment {
                     }
                 });
                 return;
+
+    }
+
+    private void initNumOfPeople() {
+        Typeface font = Typeface.createFromAsset( getActivity().getAssets(), "fontawesome-webfont.ttf" );
+
+        TextView substract = (TextView)getView().findViewById( R.id.adults_decrease);
+        substract.setTypeface(font);
+        substract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView)getView().findViewById( R.id.adults_num)).setText((--mAdultsNum)+"");
             }
-            as[i] = Integer.toString(i);
-            i++;
-        } while (true);
+        });
+        TextView add = (TextView)getView().findViewById( R.id.adults_increase);
+        add.setTypeface(font);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((EditText)getView().findViewById( R.id.adults_num)).setText((++mAdultsNum)+"");
+            }
+        });
+
     }
 
     private void initCalendar() {
-
-        final CalendarView simpleCalendarView = (CalendarView) getView().findViewById(R.id.simpleCalendarView); // get the reference of CalendarView
-        simpleCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                if(mPrevYear!=year& mPrevMonth!=month& mPrevDay!=dayOfMonth) {
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss" );
-                    sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-
-                    Date date = null;
-                    try {
-                        date = sdf.parse(year+"-"+month+"-"+(dayOfMonth-3)+" 00:00:00");
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println("in milliseconds: " + date.getDate());
-                }
-
-                mPrevYear=year;
-                mPrevMonth = month;
-                mPrevDay = dayOfMonth;
-            }
-        });
-        long selectedDate = simpleCalendarView.getDate(); // get selected date in milliseconds
-
         @MaterialCalendarView.SelectionMode
-        MaterialCalendarView mcv = (MaterialCalendarView) getView().findViewById(R.id.calendarView);
-                mcv.state().edit()
+        final MaterialCalendarView mcv = (MaterialCalendarView) getView().findViewById(R.id.calendarView);
+        mcv.state().edit()
                 .setFirstDayOfWeek(Calendar.SUNDAY)
                 .commit();
         mcv.setSelectionMode(SELECTION_MODE_RANGE);
+        mcv.setDynamicHeightEnabled(true);
+        mcv.setOnDateChangedListener(new OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+                mcv.setSelectedDate(date);
+                ((TextView) getView().findViewById(R.id.checkInDay)).setText(getDate(date));
+                ((TextView) getView().findViewById(R.id.checkOutDay)).setText(getDate(date));
+                ((TextView) getView().findViewById(R.id.numOfDays)).setText("");
+
+            }
+        });
         mcv.setOnRangeSelectedListener(new OnRangeSelectedListener() {
             @Override
             public void onRangeSelected(@NonNull MaterialCalendarView widget, @NonNull List<CalendarDay> dates) {
-                for(CalendarDay date:dates) {
-                    widget.setDateSelected(date,true);
+                int numOfDays = dates.size();
+                mStartDay = dates.get(0);
+                mEndDay = dates.get(numOfDays - 1);
+
+                if (numOfDays > 1) {
+                    //TODO show end and start
+                    ((TextView) getView().findViewById(R.id.checkInDay)).setText(getDate(mStartDay));
+                    ((TextView) getView().findViewById(R.id.checkOutDay)).setText(getDate(mEndDay));
+
                 }
-        } });
+                for (CalendarDay date : dates) {
+                    widget.setDateSelected(date, true);
+                }
+
+                final MailFrag this$0;
+                if (mEndDay != null || mStartDay != null) {
+                    ((TextView) getView().findViewById(R.id.numOfDays)).setTextColor(Color.BLACK);
+                    Helper.getDateDiff(mStartDay.getDate(), mEndDay.getDate());
+                    ((TextView) getView().findViewById(R.id.numOfDays)).setText(""+Helper.getDateDiff(mStartDay.getDate(), mEndDay.getDate()));
+                }
+            }
+        });
 
 
 
     }
 
+    private String getDate(CalendarDay date) {
+        return date.getDay() + "/" + (date.getMonth()+1) + "/" + date.getYear();
+    }
 }

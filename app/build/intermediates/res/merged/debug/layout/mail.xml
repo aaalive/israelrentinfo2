@@ -2,159 +2,152 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="9.0dip" >
+    android:padding="9.0dip">
 
     <LinearLayout
         android:id="@id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#33ffffff"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-        <CalendarView
-            android:id="@+id/simpleCalendarView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+            <TextView
+                android:id="@+id/checkInDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:hint="@string/checkInDay"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="&#x2708;"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/checkOutDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:hint="@string/checkOutDay"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/numOfDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:mcv_dateTextAppearance="@style/SamsonCalTextAppearance"
+            app:mcv_headerTextAppearance="@style/SamsonCalTitleAppearance"
+            app:mcv_selectionColor="@color/app_color"
             app:mcv_showOtherDates="all"
-            app:mcv_selectionColor="#00F"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5.0dip"
-            android:text="Выберите дату приезда:"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:textAppearance="?android:textAppearanceLarge" />
-
-
-        <DatePicker
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkIn"
-            android:spinnersShown="true"
-            android:headerDayOfMonthTextAppearance="?android:textAppearanceLarge"
-            android:headerMonthTextAppearance="?android:textAppearanceLarge"
-            android:headerYearTextAppearance="?android:textAppearanceLarge"
-            android:layout_margin="5.0dip"
-            android:calendarViewShown="false"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:datePickerMode="spinner"
-            android:calendarTextColor="@android:color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5.0dip"
-            android:textColor="@android:color/black"
-            android:text="Выберите дату  отъезда:"
-            android:textStyle="bold"
-            android:textAppearance="?android:textAppearanceLarge" />
-
-        <DatePicker
-
-            android:id="@+id/checkOut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnersShown="true"
-            android:headerDayOfMonthTextAppearance="?android:textAppearanceLarge"
-            android:headerMonthTextAppearance="?android:textAppearanceLarge"
-            android:headerYearTextAppearance="?android:textAppearanceLarge"
-            android:layout_margin="5.0dip"
-            android:calendarViewShown="false"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:datePickerMode="spinner"
-            android:calendarTextColor="@android:color/black"
-            style="@style/SamsonDatePicker"
-            />
+            app:mcv_weekDayTextAppearance="@style/SamsonCalMonthAppearance" />
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5.0dip" >
+            android:layout_gravity="center"
+
+            >
 
             <TextView
-                android:id="@id/adultsTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:textStyle="bold"
+                android:text="@string/adults"
                 android:textColor="@android:color/black"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:paddingLeft="20.0dip"
-                android:text="Взрослых:"
-                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"/>
 
+            <TextView
+                android:id="@+id/adults_decrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/decrease"
+                android:textColor="@android:color/black"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/adults_num"
+                android:layout_margin="10dp"
                 />
 
-            <NumberPicker
-                android:id="@id/adults"
+            <EditText
+                android:id="@+id/adults_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/adultsTxt"
-                android:layout_below="@id/adultsTxt"
-                android:layout_marginLeft="20.0dip" />
+                android:background="@color/app_color_transparent"
+                android:textStyle="bold"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="0"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/adults_increase"
+                />
 
             <TextView
-                android:id="@id/kidsTxt"
+                android:id="@+id/adults_increase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:paddingRight="20.0dip"
-                android:text="Детей:"
-                android:textStyle="bold"
+                android:text="@string/increase"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textSize="20dp"/>
-
-            <NumberPicker
-                android:id="@id/kids"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/kidsTxt"
-                android:layout_below="@id/kidsTxt"
-                android:paddingRight="20.0dip" />
+                android:textSize="30dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"/>
         </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5.0dip"
+            android:layout_marginLeft="10dp"
             android:text="Сообщение:"
-            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/black"
-            android:textAppearance="?android:textAppearanceLarge" />
+            android:textStyle="bold" />
 
-        <!--<android.support.design.widget.TextInputLayout-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/msg_text_input_layout"-->
-        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-        <!--app:hintTextAppearance="@style/TextAppearance.AppCompat">-->
-        <!-->-->
+
         <EditText
             android:id="@id/emailBody"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5.0dip"
+            android:layout_margin="10dp"
             android:gravity="top"
             android:hint="Сообщение"
-            android:textSize="20dp"
-            android:textAppearance="?android:textAppearanceLarge"
             android:inputType="textMultiLine"
-            android:lines="1" />
-        <!--</android.support.design.widget.TextInputLayout>-->
+            android:lines="1"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="20dp" />
+
         <Button
             android:id="@id/button1"
             android:layout_width="fill_parent"
@@ -162,8 +155,8 @@
             android:layout_margin="5.0dip"
             android:background="#33000000"
             android:text="Отправить"
-            android:textSize="20dp"
             android:textColor="#ff000000"
+            android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>
 
