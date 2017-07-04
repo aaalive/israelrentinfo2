@@ -49,7 +49,23 @@ captures/
 # Google Services (e.g. APIs or Firebase)
 google-services.json
 
-# Freeline
-freeline.py
-freeline/
-freeline_project_description.json
+
+AndroidCore/AndroidCore.iml
+TemplateProject/.idea/.name
+TemplateProject/.idea/compiler.xml
+TemplateProject/.idea/copyright/profiles_settings.xml
+TemplateProject/.idea/gradle.xml
+TemplateProject/.idea/misc.xml
+TemplateProject/.idea/modules.xml
+TemplateProject/.idea/runConfigurations.xml
+TemplateProject/.idea/vcs.xml
+TemplateProject/.idea/workspace.xml
+TemplateProject/TemplateProject.iml
+AndroidCore/.idea/compiler.xml
+AndroidCore/.idea/gradle.xml
+AndroidCore/.idea/misc.xml
+AndroidCore/.idea/modules.xml
+AndroidCore/.idea/runConfigurations.xml
+AndroidCore/.idea/workspace.xml
+AndroidCore/.idea/copyright/profiles_settings.xml
+

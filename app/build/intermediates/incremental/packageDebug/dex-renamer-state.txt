@@ -1,4 +1,0 @@
-#Sun Jul 02 08:18:36 IDT 2017
-base.0=/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

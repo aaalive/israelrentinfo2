@@ -46,28 +46,15 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
 
 
 public class MailFrag extends Fragment {
-
-    private NumberPicker mAdults;
-    private DatePicker mCheckIn;
-    private DatePicker mCheckOut;
-    private EditText mEmailBody;
-    private NumberPicker mKids;
-    private int mPrevYear;
-    private int mPrevMonth;
-    private int mPrevDay;
     private CalendarDay mStartDay;
     private CalendarDay mEndDay;
     private int mAdultsNum;
+    private int mInfantsNum;
+    private int mKidsNum;
 
     public MailFrag() {
-        mEmailBody = null;
     }
 
-    public TextView createViews() {
-        TextView textview = new TextView(getActivity());
-        textview.setText("bababbabbababab");
-        return textview;
-    }
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -85,48 +72,89 @@ public class MailFrag extends Fragment {
         super.onStart();
         initCalendar();
         initNumOfPeople();
-        mEmailBody = (EditText) getView().findViewById(R.id.emailBody);
+        initShareBnt();
+//        disableFloatingBtn();
+    }
 
-                ((Button) getActivity().findViewById(R.id.button1)).setOnClickListener(new android.view.View.OnClickListener() {
-                    public void onClick(View v) {
-                        final MailFrag this$0;
-                        Date date = new Date(-1900 + mCheckOut.getYear(), mCheckOut.getMonth(), mCheckOut.getDayOfMonth());
-                        String s = (new StringBuilder(String.valueOf(Helper.getDateDiffString(new Date(-1900 + mCheckIn.getYear(), mCheckIn.getMonth(), mCheckIn.getDayOfMonth()), date)))).append(" \u043D\u043E\u0447\u0435\u0439: ").append(Helper.getDateFromDatePicket(mCheckIn)).append("-").append(Helper.getDateFromDatePicket(mCheckOut)).append(";").append(mAdults.getValue()).append("+").append(mKids.getValue()).toString();
-                        String s1 = mEmailBody.getText().toString();
-                        Intent intent = new Intent("android.intent.action.SEND");
-                        intent.putExtra("android.intent.extra.EMAIL", new String[]{
-                                "israelrent@israelrent.info"
-                        });
-                        intent.putExtra("android.intent.extra.SUBJECT", s);
-                        intent.putExtra("android.intent.extra.TEXT", s1);
-                        intent.setType("message/rfc822");
-                        startActivity(Intent.createChooser(intent, "Choose an Email client"));
-
-                        this$0 = MailFrag.this;
-                        //      super();
-                    }
+    private void initShareBnt() {
+        ((Button) getActivity().findViewById(R.id.shareBtn)).setOnClickListener(new android.view.View.OnClickListener() {
+            public void onClick(View v) {
+                final MailFrag this$0;
+                Date date = new Date(-1900 + mEndDay.getYear(), mEndDay.getMonth(), mEndDay.getDayOfMonth());
+                String s = (new StringBuilder(String.valueOf(Helper.getDateDiffString(new Date(-1900 + mStartDay.getYear(), mStartDay.getMonth(), mStartDay.getDayOfMonth()), date)))).append(" \u043D\u043E\u0447\u0435\u0439: ").append(Helper.getDateFromDatePicket(mCheckIn)).append("-").append(Helper.getDateFromDatePicket(mCheckOut)).append(";").append(mAdults.getValue()).append("+").append(mKids.getValue()).toString();
+                String s1 = ((EditText) getView().findViewById(R.id.emailBody)).getText().toString();
+                Intent intent = new Intent("android.intent.action.SEND");
+                intent.putExtra("android.intent.extra.EMAIL", new String[]{
+                        "israelrent@israelrent.info"
                 });
-                return;
+                intent.putExtra("android.intent.extra.SUBJECT", s);
+                intent.putExtra("android.intent.extra.TEXT", s1);
+                intent.setType("message/rfc822");
+                startActivity(Intent.createChooser(intent, "Choose an Email client"));
 
+                this$0 = MailFrag.this;
+                //      super();
+            }
+        });
     }
 
     private void initNumOfPeople() {
-        Typeface font = Typeface.createFromAsset( getActivity().getAssets(), "fontawesome-webfont.ttf" );
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fontawesome-webfont.ttf");
 
-        TextView substract = (TextView)getView().findViewById( R.id.adults_decrease);
+        TextView substract = (TextView) getView().findViewById(R.id.adults_decrease);
         substract.setTypeface(font);
         substract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((TextView)getView().findViewById( R.id.adults_num)).setText((--mAdultsNum)+"");
+                if (mAdultsNum > 0) {
+                    ((TextView) getView().findViewById(R.id.adults_num)).setText((--mAdultsNum) + "");
+                }
             }
         });
-        TextView add = (TextView)getView().findViewById( R.id.adults_increase);
+        TextView add = (TextView) getView().findViewById(R.id.adults_increase);
         add.setTypeface(font);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((EditText)getView().findViewById( R.id.adults_num)).setText((++mAdultsNum)+"");
+                ((TextView) getView().findViewById(R.id.adults_num)).setText((++mAdultsNum) + "");
+            }
+        });
+
+        substract = (TextView) getView().findViewById(R.id.kids_decrease);
+        substract.setTypeface(font);
+        substract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mKidsNum > 0) {
+                    ((TextView) getView().findViewById(R.id.kids_num)).setText((--mKidsNum) + "");
+                }
+            }
+        });
+        add = (TextView) getView().findViewById(R.id.kids_increase);
+        add.setTypeface(font);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView) getView().findViewById(R.id.kids_num)).setText((++mKidsNum) + "");
+            }
+        });
+
+        substract = (TextView) getView().findViewById(R.id.infants_decrease);
+        substract.setTypeface(font);
+        substract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mInfantsNum > 0) {
+                    ((TextView) getView().findViewById(R.id.infants_num)).setText((--mInfantsNum) + "");
+                }
+            }
+        });
+        add = (TextView) getView().findViewById(R.id.infants_increase);
+        add.setTypeface(font);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView) getView().findViewById(R.id.infants_num)).setText((++mInfantsNum) + "");
             }
         });
 
@@ -166,21 +194,18 @@ public class MailFrag extends Fragment {
                 for (CalendarDay date : dates) {
                     widget.setDateSelected(date, true);
                 }
-
-                final MailFrag this$0;
                 if (mEndDay != null || mStartDay != null) {
                     ((TextView) getView().findViewById(R.id.numOfDays)).setTextColor(Color.BLACK);
                     Helper.getDateDiff(mStartDay.getDate(), mEndDay.getDate());
-                    ((TextView) getView().findViewById(R.id.numOfDays)).setText(""+Helper.getDateDiff(mStartDay.getDate(), mEndDay.getDate()));
+                    ((TextView) getView().findViewById(R.id.numOfDays)).setText("" + Helper.getDateDiff(mStartDay.getDate(), mEndDay.getDate()));
                 }
             }
         });
 
 
-
     }
 
     private String getDate(CalendarDay date) {
-        return date.getDay() + "/" + (date.getMonth()+1) + "/" + date.getYear();
+        return date.getDay() + "/" + (date.getMonth() + 1) + "/" + date.getYear();
     }
 }
