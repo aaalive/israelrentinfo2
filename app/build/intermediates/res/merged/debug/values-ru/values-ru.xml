@@ -39,7 +39,10 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Открыть доступ пользователю %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Свернуть"</string>
     <string name="action_settings">Settings</string>
+    <string name="adults"> Взрослых</string>
     <string name="app_name">Samson Ашкелон</string>
+    <string name="checkInDay">     Заезд     </string>
+    <string name="checkOutDay">   Выезд    </string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Включить"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Для работы приложения \"<ns1:g id="APP_NAME">%1$s</ns1:g>\" требуется включить сервисы Google Play."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Включите сервисы Google Play"</string>
@@ -57,6 +60,11 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Открыть на телефоне"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Войти"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Войти через аккаунт Google"</string>
+    <string name="decrease"></string>
+    <string name="increase"></string>
+    <string name="infants"> Младенцев</string>
+    <string name="kids"> Детей</string>
+    <string name="numberOfDays">   Дней    </string>
     <string msgid="146198913615257606" name="search_menu_title">"Поиск"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
 </resources>

@@ -2,4 +2,14 @@
 <resources>
     <string name="app_name">Samson Ашкелон</string>
     <string name="action_settings">Settings</string>
+    <string name="checkInDay">     Заезд     </string>
+    <string name="checkOutDay">   Выезд    </string>
+    <string name="numberOfDays">   Дней    </string>
+    <string name="adults"> Взрослых</string>
+    <string name="kids"> Детей</string>
+    <string name="infants"> Младенцев</string>
+
+
+    <string name="decrease">&#xf056;</string>
+    <string name="increase">&#xf055;</string>
 </resources>

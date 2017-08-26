@@ -187,10 +187,8 @@ public class MailFrag extends Fragment {
                 mEndDay = dates.get(numOfDays - 1);
 
                 if (numOfDays > 1) {
-                    //TODO show end and start
                     ((TextView) getView().findViewById(R.id.checkInDay)).setText(getDate(mStartDay));
                     ((TextView) getView().findViewById(R.id.checkOutDay)).setText(getDate(mEndDay));
-
                 }
                 for (CalendarDay date : dates) {
                     widget.setDateSelected(date, true);
