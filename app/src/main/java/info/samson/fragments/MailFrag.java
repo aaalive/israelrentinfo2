@@ -79,10 +79,12 @@ public class MailFrag extends Fragment {
     private void initShareBnt() {
         ((Button) getActivity().findViewById(R.id.shareBtn)).setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(View v) {
-                final MailFrag this$0;
-                Date date = new Date(-1900 + mEndDay.getYear(), mEndDay.getMonth(), mEndDay.getDayOfMonth());
-                String s = (new StringBuilder(String.valueOf(Helper.getDateDiffString(new Date(-1900 + mStartDay.getYear(), mStartDay.getMonth(), mStartDay.getDayOfMonth()), date)))).append(" \u043D\u043E\u0447\u0435\u0439: ").append(Helper.getDateFromDatePicket(mCheckIn)).append("-").append(Helper.getDateFromDatePicket(mCheckOut)).append(";").append(mAdults.getValue()).append("+").append(mKids.getValue()).toString();
-                String s1 = ((EditText) getView().findViewById(R.id.emailBody)).getText().toString();
+                String s= ((TextView) getView().findViewById(R.id.checkInDay)).getText() + " -  "+ ((TextView) getView().findViewById(R.id.checkOutDay)).getText() +
+                          "\n Days:   " + ((TextView) getView().findViewById(R.id.numOfDays)).getText()+
+                          "\n Adults: " +  ((TextView) getView().findViewById(R.id.adults_num)).getText()+
+                          "\n Kids:   " + ((TextView) getView().findViewById(R.id.kids_num)).getText() +
+                          "\n Babies: " + ((TextView) getView().findViewById(R.id.infants_num)).getText();
+                String s1 = s+ "\n Msg: " + ((EditText) getView().findViewById(R.id.emailBody)).getText().toString();
                 Intent intent = new Intent("android.intent.action.SEND");
                 intent.putExtra("android.intent.extra.EMAIL", new String[]{
                         "israelrent@israelrent.info"
@@ -91,14 +93,13 @@ public class MailFrag extends Fragment {
                 intent.putExtra("android.intent.extra.TEXT", s1);
                 intent.setType("message/rfc822");
                 startActivity(Intent.createChooser(intent, "Choose an Email client"));
-
-                this$0 = MailFrag.this;
-                //      super();
             }
         });
     }
 
     private void initNumOfPeople() {
+        ((EditText) getView().findViewById(R.id.emailBody)).getBackground().clearColorFilter();
+
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fontawesome-webfont.ttf");
 
         TextView substract = (TextView) getView().findViewById(R.id.adults_decrease);

@@ -24,20 +24,20 @@
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/info.xml",
-        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/layout/info.xml"
-    },
-    {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/layout/abc_action_menu_layout.xml"
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/info.xml",
+        "source": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/src/main/res/layout/info.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/anastasiya/.android/build-cache/f374ba60f016c8491fe05a60d1d9ba832f75edd3/output/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/Users/anastasiya/dev/OLD_PROJECTS/PROJECTS/israelrentinfo2/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",

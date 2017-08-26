@@ -293,6 +293,7 @@
             android:textColorHint="@android:color/black"
             android:textColorHighlight="@android:color/black"
             android:lines="1"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:textAppearanceLarge"
             android:textSize="20dp" />
 
