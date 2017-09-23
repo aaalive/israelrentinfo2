@@ -22,6 +22,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -30,6 +32,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -58,6 +61,7 @@ import static info.samson.helpers.Constans.PERMISSIONS_REQUEST_READ_CONTACTS;
 public class FragmentTabs extends AppCompatActivity {
 
     private static final String TAG = FragmentTabs.class.getSimpleName();
+    private static final int REQUEST_PERMISSIONS = 13;
     private DrawerLayout mDrawerLayout;
     private TabLayout mTabLayout;
 
@@ -65,6 +69,10 @@ public class FragmentTabs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       checkPermissions();
+    }
+
+    private void initApp(){
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         if (viewPager != null) {
@@ -72,7 +80,24 @@ public class FragmentTabs extends AppCompatActivity {
         }
         initTabLayout(viewPager);
         initFloatingBtn();
+    }
 
+    private void checkPermissions() {
+        final String[] permissionArr = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.READ_CONTACTS,
+                Manifest.permission.CALL_PHONE,
+        };
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) +
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)+
+                ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)+
+                ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(FragmentTabs.this,
+                    permissionArr,
+                    REQUEST_PERMISSIONS);
+        } else {
+            initApp();
+        }
     }
 
     private void initFloatingBtn() {
@@ -171,20 +196,6 @@ public class FragmentTabs extends AppCompatActivity {
 
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    public boolean onOptionsItemSelected(MenuItem menuitem) {
-        Intent intent;
-        intent = new Intent("android.intent.action.VIEW");
-        intent.setData(Uri.parse("http://israelrent.info/index/contacts/0-12"));
-        startActivity(intent);
-        return true;
-    }
-
-
     private void setupViewPager(final ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new RentFrag(), "Category 1");
@@ -212,5 +223,35 @@ public class FragmentTabs extends AppCompatActivity {
         });
     }
 
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuitem) {
+        Intent intent;
+        intent = new Intent("android.intent.action.VIEW");
+        intent.setData(Uri.parse("http://israelrent.info/index/contacts/0-12"));
+        startActivity(intent);
+        return true;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_PERMISSIONS: {
+                if ((grantResults.length > 0) && (grantResults[0] +
+                        grantResults[1]+grantResults[2]+grantResults[3]) == PackageManager.PERMISSION_GRANTED) {
+                    initApp();
+                } else {
+                    checkPermissions();
+                }
+                return;
+            }
+        }
+    }
 }
 
